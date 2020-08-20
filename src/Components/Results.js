@@ -9,7 +9,7 @@ class Results extends Component {
         return this.props.results.map((item, index) => (
             <div key={index}>
                 <h3>Name: {item.show.name}</h3>
-                <img src={item.show.image.medium}/><br></br>
+                {/* <img src={item.show.image.medium} alt="hehe"/><br></br> */}
                 Genre: {item.show.genres.map((items, idx)=>
                 <span key={idx}>
                     <span>{items} </span>
