@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getTvShowData } from "../Actions/Actions";
-// import { withRouter } from 'react-router-dom';
 import Results from './Results'
 
 class Form extends Component{
@@ -40,7 +39,7 @@ class Form extends Component{
             {/* <form onSubmit={ this.handleSubmitOne}>
                 <input type="text" onChange = {this.handleChangeOne} placeholder="Search by Name"/>
             </form> */}
-            <input type="Submit"></input>
+           
             </form>
             <Results/>
             </div>
@@ -53,7 +52,5 @@ const mDTP = dispatch => ({
     add: (userInput) => dispatch(getTvShowData(userInput)),
     // addOne: (userInputOne) => dispatch(getTvShowDataOne(userInputOne))
 })
-
-// export default withRouter(connect(null, mDTP)(Form));
 
 export default (connect(null,mDTP)(Form));
