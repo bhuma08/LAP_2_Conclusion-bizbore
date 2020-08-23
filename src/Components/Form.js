@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getTvShowData } from "../Actions/Actions";
 import Results from './Results'
+import Gif from "./Gif"
 
 class Form extends Component{
     
     state = {
         userInput:"",
-        // userInputOne:""
     }
 
     handleChange = e => {
@@ -20,28 +20,14 @@ class Form extends Component{
         this.setState({userInput:""})
     }
 
-    // handleChangeOne = e => {
-    //     this.setState({ userInputOne: e.target.value })
-    // }
-
-    // handleSubmitOne = e => {
-    //     e.preventDefault();
-    //     this.props.addOne(this.state.userInputOne)
-    //     this.setState({userInputOne:""})
-    // }
-
     render(){
         return(
             <div>
             <form onSubmit= {this.handleSubmit}>
                 <input type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/>
-            
-            {/* <form onSubmit={ this.handleSubmitOne}>
-                <input type="text" onChange = {this.handleChangeOne} placeholder="Search by Name"/>
-            </form> */}
-           
             </form>
             <Results/>
+            <Gif/>
             </div>
         )
     }
@@ -50,7 +36,6 @@ class Form extends Component{
 
 const mDTP = dispatch => ({
     add: (userInput) => dispatch(getTvShowData(userInput)),
-    // addOne: (userInputOne) => dispatch(getTvShowDataOne(userInputOne))
 })
 
 export default (connect(null,mDTP)(Form));

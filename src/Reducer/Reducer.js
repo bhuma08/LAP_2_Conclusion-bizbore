@@ -1,8 +1,8 @@
 const initialState = {
     tvShowName : "",
     tvShowData: [], //data from api
-    // name: "",
-    // tvShowDataOne: []
+    gifName: [],
+    gifData: []
 }
 
 function Reducer (state = initialState, action){
@@ -12,11 +12,10 @@ function Reducer (state = initialState, action){
         //getting and storing data from api
         case "ADD_DATA" :
             return{...state, tvShowData: action.payload}
-        // case "ADD_NAME" :
-        //     return {...state, name: action.payload }
-        // //getting and storing data from api
-        // case "ADD_DATA_ONE" :
-        //     return{...state, tvShowDataOne: action.payload}
+        case "ADD_GIF_NAME" :
+            return{...state, gifName: [...state.gifName, action.payload]}
+        case "ADD_GIF_DATA" :
+            return{...state, gifData: [...state.gifData, action.payload]}
         default:
             return state;
     }
