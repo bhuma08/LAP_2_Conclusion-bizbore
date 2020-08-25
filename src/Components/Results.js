@@ -1,49 +1,51 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+
 class Results extends Component {
 
     renderResults = () => {
-        // console.log(this.props.results)
+      
         return this.props.results.map((item, index) => (
             <div key={index}>
+                
                 <h3>Name: {item.show.name}</h3>
                 {/* <img src={item.show.image.medium} alt="hehe"/><br></br> */}
+                {item.show.image ? <img src={item.show.image.medium} alt="image of the show"/> : null}<br></br>
                 Genre: {item.show.genres.map((items, idx)=>
                 <span key={idx}>
                     <span>{items} </span>
                 </span>)}
                 <p>Language: {item.show.language}</p>
                 <p>Status: {item.show.status}</p>
-                <p>Summary: {item.show.summary}</p>
+                {item.show.summary ? <p>Summary: {item.show.summary.replace('<p>','').replace('</p>','').replace('<b>','').replace('</b>','').replace('<i>','').replace('</i>','')}</p> : null} 
                 <p>Ratings: {item.show.rating.average}</p><hr></hr>
+                
             </div>
         ))
+
     }
+    
 
-    renderGif = () =>{
-        return (
-        // this.props.gify.map((items, idx) =>{
-        //     <div key={idx}>
-        //         {console.log(items)}
-        //         <img src={items.data[1].images.original.url}/> 
-        //     </div>          
-        // })
-        <div>
-            {this.props.gify.data}
-            {console.log(this.props.gify.data)}
-
-        </div>
-        
-    ) }
+    // renderGif = () =>{
+    //     return (
+    //     this.props.gify.map((items, idx) =>{
+    //         <div key={idx}>
+    //             {console.log(items.data[1].images.original.url)}
+    //             <img src={items.data[1].images.original.url}/> 
+    //         </div>          
+    //     })
+       
+    // ) }
 
     render(){
          
         return (
             <div>
 
-                {this.props.gify ? this.renderGif(this.props.gify) : "No GIFs sorry"}
+                {/* {this.props.gify ? this.renderGif(this.props.gify) : "No GIFs sorry"} */}
                 {this.props.results ? this.renderResults(this.props.results) : "There are no results"}
+              
                 
             </div>
         )
@@ -52,6 +54,6 @@ class Results extends Component {
 
 const mSTP = state => ({
     results: state.tvShowData,
-    gify: state.gifData
+    // gify: state.gifData
 })
 export default connect(mSTP)(Results)

@@ -17,13 +17,15 @@ class Form extends Component{
     handleSubmit = e => {
         e.preventDefault();
         this.props.add(this.state.userInput)
-        this.setState({userInput:""})
+        // this.setState({userInput:""})
+        form.reset()
+        
     }
 
     render(){
         return(
             <div>
-            <form onSubmit= {this.handleSubmit}>
+            <form id="form" onSubmit= {this.handleSubmit}>
                 <input type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/>
             </form>
             <Results/>
