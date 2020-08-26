@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getTvShowData } from "../Actions/Actions";
 import Results from './Results'
 import Gif from "./Gif"
+import './Form.css'
 
 class Form extends Component{
     
@@ -24,6 +25,8 @@ class Form extends Component{
 
     render(){
         return(
+            <>
+            <div id="allForm"></div>
             <div>
             <form id="form" onSubmit= {this.handleSubmit}>
                 <input type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/>
@@ -31,6 +34,7 @@ class Form extends Component{
             <Results/>
             <Gif/>
             </div>
+            </>
         )
     }
 

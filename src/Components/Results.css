@@ -1,0 +1,16 @@
+#tvShowList {
+    text-align: center;
+    margin-top: 10%;
+    color: white;
+    margin-left:25%;
+    margin-right: 25%;  
+}
+
+#summary {
+    padding: 0 25% 0 25%;
+}
+
+/* body {
+    background-image: radial-gradient(rgb(172, 48, 48) 25%, rgb(71, 71, 177) 25%, purple 25%, black 25%);
+} */
+

@@ -10,12 +10,12 @@ class Nav extends Component{
         return(
             <div>
          
-                <ul> 
-                <Link to = "/">
-                <li>Home</li>
+                <ul className="NavBar"> 
+                <Link to = "/" style={{ textDecoration: 'none' }}>
+                <li className="list">Home</li>
                 </Link>
-                <Link to = "/search">
-                <li>Search</li>
+                <Link to = "/search" style={{ textDecoration: 'none' }}>
+                <li className="list">Search</li>
                 </Link>
                 </ul>
 
