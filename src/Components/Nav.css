@@ -1,24 +1,19 @@
-.NavBar {
-    position: fixed;
-    top: 40%;
-    left: 50px;
-    z-index: 9;
-    font-size: 20px;
-    
-}
-
-li {
-    padding-bottom: 40%;
-    color: white;
-    
-
+.list:hover {
+    color: whitesmoke;
 }
 
 ul {
     list-style-type: none;
-    z-index: 9;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(104, 9, 9, 0.8);
 }
-
-.list:hover {
-    font-size: 30px;
+  
+li {
+    float: left;
+    display: block;
+    padding: 20px;
+    color: black;
+    text-align: right;
 }

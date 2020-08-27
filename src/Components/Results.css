@@ -1,13 +1,22 @@
 #tvShowList {
-    text-align: center;
-    margin-top: 10%;
+    /* text-align: center; */
+    /* margin-top: 10%; */
     color: white;
     margin-left:25%;
     margin-right: 25%;  
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 30% 70%;
+    gap: 10%;
+    background-color: tomato;
+    padding: 5% 5% 5% 5%;
+    overflow: scroll;
+    height: 10%;
+    /* position: relative; */
 }
 
 #summary {
-    padding: 0 25% 0 25%;
+    padding: 0 25% 0 0;
 }
 
 /* body {

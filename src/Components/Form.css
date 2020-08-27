@@ -5,11 +5,9 @@
     left: 50%;
     color: white;
     transform: translate(-50%, -50%);
+    margin-bottom: 25%;
    
 }
 
-#allForm {
-    background-color: blue;
-}
 
 
