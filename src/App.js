@@ -12,6 +12,7 @@ class App extends React.Component {
     return (
       <div>
         <Nav/>
+        <h1>Hi</h1>
         <Switch>
         <Route exact path = "/" component ={Home}></Route>
         <Route path = "/search" component = {Search}></Route>
