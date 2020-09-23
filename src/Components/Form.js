@@ -4,11 +4,15 @@ import { getTvShowData } from "../Actions/Actions";
 import Results from './Results'
 import Gif from "./Gif"
 import './Form.css'
+import { Modal } from 'react-responsive-modal';
+// import 'react-responsive-modal/styles.css';
+ 
 
 class Form extends Component{
     
     state = {
         userInput:"",
+        open: false
     }
 
     handleChange = e => {
@@ -19,11 +23,17 @@ class Form extends Component{
         e.preventDefault();
         this.props.add(this.state.userInput)
         // this.setState({userInput:""})
+        this.setState({ open: true });
         form.reset()
         
     }
+     
+    onCloseModal = () => {
+        this.setState({ open: false });
+    };
 
     render(){
+        const { open } = this.state;
         return(
             <>
             <div id="allForm"></div>
@@ -31,9 +41,13 @@ class Form extends Component{
             <form id="form" onSubmit= {this.handleSubmit}>
                 <input type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/>
             </form>
-            <Results/>
-            <Gif/>
+            {/* <Gif/> */}
             </div>
+
+            <button onClick={this.handleSubmit}>Submit</button>
+            <Modal open={open} onClose={this.onCloseModal} center>
+                <Results/>
+            </Modal>
             </>
         )
     }
