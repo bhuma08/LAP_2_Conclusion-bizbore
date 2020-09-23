@@ -9,15 +9,17 @@ class Nav extends Component{
 
         return(
             <div>
-         
-                <ul className="NavBar"> 
-                <Link to = "/" style={{ textDecoration: 'none' }}>
-                <li className="list">Home</li>
-                </Link>
-                <Link to = "/search" style={{ textDecoration: 'none' }}>
-                <li className="list">Search</li>
-                </Link>
+
+                <ul class="nav nav-pills nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/search">Search</a>
+                </li>
+
                 </ul>
+    
 
             </div>
         )

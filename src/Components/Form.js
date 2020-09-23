@@ -5,7 +5,7 @@ import Results from './Results'
 import Gif from "./Gif"
 import './Form.css'
 import { Modal } from 'react-responsive-modal';
-// import 'react-responsive-modal/styles.css';
+import 'react-responsive-modal/styles.css';
  
 
 class Form extends Component{
@@ -39,12 +39,13 @@ class Form extends Component{
             <div id="allForm"></div>
             <div>
             <form id="form" onSubmit= {this.handleSubmit}>
-                <input type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/>
+                <input class="input is-rounded is-primary" type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/>
+                {/* <input type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/> */}
             </form>
             {/* <Gif/> */}
             </div>
 
-            <button onClick={this.handleSubmit}>Submit</button>
+            <button className ='button is-primary is-fullwidth is-rounded is-hovered' onClick={this.handleSubmit}>Submit</button>
             <Modal open={open} onClose={this.onCloseModal} center>
                 <Results/>
             </Modal>
