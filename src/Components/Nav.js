@@ -8,14 +8,14 @@ class Nav extends Component{
     render(){
 
         return(
-            <div>
+            <div className='p-6'>
 
-                <ul class="nav nav-pills nav-fill">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
+                <ul className="nav nav-pills nav-fill">
+                <li className="nav-item">
+                    <a className="nav-link" href="/">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/search">Search</a>
+                <li className="nav-item">
+                    <a className="nav-link" href="/search">Search</a>
                 </li>
 
                 </ul>

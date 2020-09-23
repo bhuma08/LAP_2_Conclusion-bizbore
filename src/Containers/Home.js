@@ -13,15 +13,6 @@ class Home extends Component {
         return(
             <>
 
-            {/* <div id="SLIDE_BG"></div>
-            
-            <div id="main">
-
-            <h1>BizBore</h1>
-            <h3>Get easy access on information of over thousands of tv series.</h3>
-            <button onClick={this.goToSearch}>Get Started</button>
-            </div> */}
-
             <section class="hero is-medium is-primary is-bold">
             <div class="hero-body">
                 <div class="container">

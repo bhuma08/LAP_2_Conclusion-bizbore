@@ -39,7 +39,7 @@ class Form extends Component{
             <div id="allForm"></div>
             <div>
             <form id="form" onSubmit= {this.handleSubmit}>
-                <input class="input is-rounded is-primary" type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/>
+                <input className="input is-rounded is-primary mt-6" type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/>
                 {/* <input type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/> */}
             </form>
             {/* <Gif/> */}

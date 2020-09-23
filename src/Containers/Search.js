@@ -11,7 +11,7 @@ class Search extends Component {
         const renderThis = this.state.condition ? <div><Form/></div> : <h1></h1>
         return(
             <>
-            <div id="search"></div>
+            
             <div>
                 {renderThis}
             </div>
