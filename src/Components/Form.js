@@ -6,6 +6,7 @@ import Gif from "./Gif"
 import './Form.css'
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
+import { withRouter } from 'react-router-dom';
  
 
 class Form extends Component{
@@ -32,20 +33,27 @@ class Form extends Component{
         this.setState({ open: false });
     };
 
+    redirect = () =>{
+        this.props.history.push('/')
+    }
+
     render(){
         const { open } = this.state;
         return(
             <>
-            <div id="allForm"></div>
+            <div className="buttons">
+                <button onClick={this.redirect} className="button is-light is-primary is-large">BizBore</button>
+            </div>
             <div>
-            <form id="form" onSubmit= {this.handleSubmit}>
-                <input className="input is-rounded is-primary mt-6" type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/>
-                {/* <input type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/> */}
-            </form>
-            {/* <Gif/> */}
+
+                <form id="form" onSubmit= {this.handleSubmit}>
+                    <input className="input is-rounded is-large is-primary mt-6" type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/>
+                    {/* <input type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/> */}
+                </form>
+                {/* <Gif/> */}
             </div>
 
-            <button className ='button is-primary is-fullwidth is-rounded is-hovered' onClick={this.handleSubmit}>Submit</button>
+            <button className ='button is-primary is-large is-fullwidth is-rounded is-hovered' onClick={this.handleSubmit}>Submit</button>
             <Modal open={open} onClose={this.onCloseModal} center>
                 <Results/>
             </Modal>
@@ -59,4 +67,4 @@ const mDTP = dispatch => ({
     add: (userInput) => dispatch(getTvShowData(userInput)),
 })
 
-export default (connect(null,mDTP)(Form));
+export default withRouter((connect(null,mDTP)(Form)));

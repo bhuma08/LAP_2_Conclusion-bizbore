@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form from "../Components/Form";
 import "./Search.css"
+import Nav from "../Components/Nav";
 
 class Search extends Component {
 
@@ -11,10 +12,12 @@ class Search extends Component {
         const renderThis = this.state.condition ? <div><Form/></div> : <h1></h1>
         return(
             <>
+            {/* <Nav/> */}
             
-            <div>
+            <div class='searchpage'>
                 {renderThis}
             </div>
+            <div className='extra'></div>
             </>
         )
     }

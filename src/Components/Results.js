@@ -8,24 +8,23 @@ class Results extends Component {
     renderResults = () => {
       
         return this.props.results.map((item, index) => (
-            <div className="columns is-0" key={index}>
-                {/* <img src={item.show.image.medium} alt="hehe"/><br></br> */}
+            <div className='each'>
+                <div className="columns is-0" key={index}>
 
-                <div className="column">{item.show.image ? <img src={item.show.image.medium} alt="image of the show"/> : null}</div>
-
-                <div className="column">
-                    Name: {item.show.name}<br></br>
-                    Genre: {item.show.genres.map((items, idx)=>
-                       <span key={idx}>
-                       <span>{items} </span>
-                       </span>)}
-                    <p>Language: {item.show.language}</p>
-                    <p>Status: {item.show.status}</p>
-                    {item.show.summary ? <p>Summary: {item.show.summary.replace('<p>','').replace('</p>','').replace('<b>','').replace('</b>','').replace('<i>','').replace('</i>','')}</p> : null} 
-                    <p>Ratings: {item.show.rating.average}</p>
+                    <div className="column">{item.show.image ? <img src={item.show.image.medium} alt="image of the show"/> : null}</div>
+                    <div className="column">
+                        <span className='title'>{item.show.name}</span><br></br><br></br>
+                        Genre: {item.show.genres.map((items, idx)=>
+                        <span key={idx}>
+                        <span>{items} </span>
+                        </span>)}<br></br>
+                        <p>Language: {item.show.language}</p><br></br>
+                        <p>Status: {item.show.status}</p><br></br>
+                        {item.show.summary ? <p>Summary: {item.show.summary.replace('<p>','').replace('</p>','').replace('<b>','').replace('</b>','').replace('<i>','').replace('</i>','')}</p> : null} <br></br>
+                        <p>Ratings: {item.show.rating.average}</p>
+                    </div>
+                    <br></br>
                 </div>
-                <br></br>
-
             </div>
         ))
 

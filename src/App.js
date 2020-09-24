@@ -4,14 +4,14 @@ import Home from "./Containers/Home"
 import Search from "./Containers/Search"
 import Results from "./Components/Results"
 import Gif from "./Components/Gif";
-import Nav from "./Components/Nav";
+
 
 class App extends React.Component {
   state = {};
   render() {
     return (
       <div>
-        <Nav/>
+        {/* <Nav/> */}
         
         <Switch>
         <Route exact path = "/" component ={Home}></Route>

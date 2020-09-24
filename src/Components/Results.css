@@ -1,2 +1,19 @@
+.each{
+    border: #00d1b2;
+    margin-top: 5%;
+    padding-left: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 2%;
+    border-style: double;
+    /* border-radius: 5%; */
+    background-color:rgba(140, 213, 192, 0.5);
+}
 
+.column {
+    color: black;
+}
 
+.title{
+    font-size: 20px;
+}
