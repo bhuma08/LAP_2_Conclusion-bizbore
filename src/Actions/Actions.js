@@ -29,39 +29,39 @@ const fetchTvShowData = async tvShowName => {
         throw new Error(err.message)
     }
 }
-const addGifName = gifName => ({
-    type: "ADD_GIF_NAME",
-    payload: gifName
-})
-const addGifData = gifData => ({
-    type: "ADD_GIF_DATA",
-    payload: gifData
-})
+// const addGifName = gifName => ({
+//     type: "ADD_GIF_NAME",
+//     payload: gifName
+// })
+// const addGifData = gifData => ({
+//     type: "ADD_GIF_DATA",
+//     payload: gifData
+// })
 
-export const getGifData = gifName => {
-    return async dispatch => {
-        try {
-            dispatch(addGifName(gifName))
-            const data = await fetchGifData(gifName)
-            dispatch(addGifData(data))
-        } catch (err) {
-            console.warn(err.message)
-        }   
-    }
-}
+// export const getGifData = gifName => {
+//     return async dispatch => {
+//         try {
+//             dispatch(addGifName(gifName))
+//             const data = await fetchGifData(gifName)
+//             dispatch(addGifData(data))
+//         } catch (err) {
+//             console.warn(err.message)
+//         }   
+//     }
+// }
 
 
-const fetchGifData = async gifName => {
+// const fetchGifData = async gifName => {
    
 
-        try {
-            const gifyAPIKey = 'qpx6gNTGPO74C8mY6JCzKpMTCiGKxkjC'
-            const resp = await fetch(`https://api.giphy.com/v1/gifs/search?q=${gifName}&api_key=${gifyAPIKey}&limit=3`);
-            const data = await resp.json()
-            return data
+//         try {
+//             const gifyAPIKey = 'qpx6gNTGPO74C8mY6JCzKpMTCiGKxkjC'
+//             const resp = await fetch(`https://api.giphy.com/v1/gifs/search?q=${gifName}&api_key=${gifyAPIKey}&limit=3`);
+//             const data = await resp.json()
+//             return data
         
-    } catch (err) {
-        throw new Error(err.message)
-    }
+//     } catch (err) {
+//         throw new Error(err.message)
+//     }
     
-}
+// }

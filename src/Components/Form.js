@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getTvShowData } from "../Actions/Actions";
 import Results from './Results'
-import Gif from "./Gif"
 import './Form.css'
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
@@ -48,12 +47,10 @@ class Form extends Component{
 
                 <form id="form" onSubmit= {this.handleSubmit}>
                     <input className="input is-rounded is-large mt-6" type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/>
-                    {/* <input type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/> */}
                 </form>
-                {/* <Gif/> */}
+               
             </div>
-{/* 
-            <button className ='button submit is-large is-fullwidth is-rounded is-hovered' onClick={this.handleSubmit}>Submit</button> */}
+
             <Modal open={open} onClose={this.onCloseModal} center>
                 <Results/>
             </Modal>
