@@ -22,7 +22,7 @@ export const getTvShowData = tvShowName => {
 
 const fetchTvShowData = async tvShowName => {
     try {
-        const resp = await fetch(`http://api.tvmaze.com/search/shows?q=${tvShowName}`);
+        const resp = await fetch(`https://api.tvmaze.com/search/shows?q=${tvShowName}`);
         const data = await resp.json()
         return data
     } catch (err) {

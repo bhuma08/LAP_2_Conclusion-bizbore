@@ -14,7 +14,7 @@ class Search extends Component {
             <>
             {/* <Nav/> */}
             
-            <div class='searchpage'>
+            <div className='searchpage'>
                 {renderThis}
             </div>
             <div className='extra'></div>
