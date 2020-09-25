@@ -11,7 +11,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {/* <Nav/> */}
         
         <Switch>
         <Route exact path = "/" component ={Home}></Route>
