@@ -41,19 +41,19 @@ class Form extends Component{
         const { open } = this.state;
         return(
             <>
-            <div className="buttons">
-                <button onClick={this.redirect} className="button is-light is-primary is-large">BizBore</button>
+            <div className="btn">
+                <button onClick={this.redirect} className="button bizbore is-rounded">BIZBORE</button>
             </div>
             <div>
 
                 <form id="form" onSubmit= {this.handleSubmit}>
-                    <input className="input is-rounded is-large is-primary mt-6" type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/>
+                    <input className="input is-rounded is-large mt-6" type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/>
                     {/* <input type="text" onChange = {this.handleChange} placeholder="Search by TV Show"/> */}
                 </form>
                 {/* <Gif/> */}
             </div>
-
-            <button className ='button is-primary is-large is-fullwidth is-rounded is-hovered' onClick={this.handleSubmit}>Submit</button>
+{/* 
+            <button className ='button submit is-large is-fullwidth is-rounded is-hovered' onClick={this.handleSubmit}>Submit</button> */}
             <Modal open={open} onClose={this.onCloseModal} center>
                 <Results/>
             </Modal>
