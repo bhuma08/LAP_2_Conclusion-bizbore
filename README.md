@@ -8,7 +8,7 @@ You may visit the site:
 <a href="4gcloe.gif"><img src='4gcloe.gif'></a>
 
 
-## Devolpment Setup:
+## Setup:
 1. Fork and Clone this repo
 2. cd into the project folder with `cd LAP_2_CONCLUSION-BIZBORE`
 3. Install packages with `npm install`
