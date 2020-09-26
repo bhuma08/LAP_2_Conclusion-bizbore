@@ -1,4 +1,4 @@
-# BIZBORE: Mini Project using React + Redux 
+# BIZBORE: Using React + Redux 
 
 Bizbore is a web application where you can get information about thousands of TV shows. 
 
