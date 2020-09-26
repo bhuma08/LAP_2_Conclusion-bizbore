@@ -5,7 +5,7 @@ Bizbore is a web application where you can get information on thousands of TV sh
 You may visit the site: 
 [Bizbore](https://bizbore.netlify.app/)
 
-<a href="4gcloe.gif" target='_blank'><img src='4gcloe.gif'></a>
+<a href="4gcloe.gif" target="_blank"><img src='4gcloe.gif'></a>
 
 ***
 
