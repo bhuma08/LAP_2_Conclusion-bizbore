@@ -1,6 +1,6 @@
 # BIZBORE: Using React + Redux 
 
-Bizbore is a web application where you can get information about thousands of TV shows. 
+Bizbore is a web application where you can get information on thousands of TV shows. 
 
 You may visit the site: 
 [Bizbore](https://bizbore.netlify.app/)
