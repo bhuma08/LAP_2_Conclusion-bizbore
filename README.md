@@ -1,4 +1,5 @@
 # BIZBORE: Using React + Redux 
+***
 
 Bizbore is a web application where you can get information on thousands of TV shows. 
 
@@ -7,6 +8,7 @@ You may visit the site:
 
 <a href="4gcloe.gif"><img src='4gcloe.gif'></a>
 
+***
 
 ## Setup:
 1. Fork and Clone this repo
